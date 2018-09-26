@@ -1,8 +1,7 @@
-console.log('Starting App. ');
-
+console.log('Starting app.js ');
 const fs = require('fs');
-const os = require('os');
-
+const _ = require('lodash');
+const notes = require('./note.js');
 var user = os.userInfo();
 console.log(user.username);
 
@@ -40,6 +39,15 @@ const notes = require('./note.js');
 var res = notes.addNote();
 var sumNumber = notes.addsum(7,6)
 console.log(sumNumber);
+
+var res = notes.addNote();
+var sumNumber = notes.addsum(7,6)
+console.log(sumNumber);
+console.log(res);
+var filteredArray = _.uniq(['Andrew',1,'Andrew',1,2,3,4,5]);
+ console.log(filteredArray);
+console.log(_.isString('Andrew'));
+
 
 // var user = os.userInfo();
 // console.log(user.username);
